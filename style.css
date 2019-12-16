@@ -1,0 +1,116 @@
+* {
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.full {
+  text-align: center;
+  margin-top: 20px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+h1 span {
+  color: hsl(223, 87%, 63%);
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 300;
+  color: hsl(0, 0%, 59%);
+  font-size: 35px;
+}
+
+h4 span {
+  font-weight: 700;
+  color: black;
+}
+
+input[type="email"] {
+  width: 100%;
+  height: 50px;
+  padding: 20px;
+  border: 1px solid hsl(223, 100%, 88%);
+  border-radius: 30px;
+}
+
+input[type="email"]:focus {
+  outline: none;
+}
+
+button {
+  width: 30%;
+  height: 50px;
+  border-radius: 30px;
+  border: none;
+  background: hsl(223, 87%, 63%);
+  color: white;
+  box-shadow: 10px 10px 10px hsl(223, 100%, 88%);
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+.image-container {
+  width: 40%;
+  margin: 30px auto;
+}
+
+img {
+  width: 100%;
+}
+
+input::-webkit-input-placeholder {
+  color: hsl(223, 100%, 88%);
+  font-size: 12px;
+}
+
+.email {
+  margin-top: 30px;
+  width: 35%;
+  margin: 30px auto;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.errorMessage {
+  text-align: left;
+  font-size: 13px;
+  color: hsl(354, 100%, 66%);
+  margin-left: 15px;
+  display: none;
+}
+.input-field {
+  width: 60%;
+}
+
+@media screen and (max-width: 700px) {
+  input[type="email"] {
+    width: 60%;
+    margin: auto;
+  }
+  button {
+    width: 60%;
+    margin-top: 15px;
+  }
+  .image-container {
+    width: 80%;
+  }
+  .email {
+    width: 100%;
+    display: block !important;
+  }
+  .input-field {
+    width: 100%;
+  }
+  .errorMessage {
+    text-align: center;
+    margin-left: 0px;
+  }
+}

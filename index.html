@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,600,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Ping coming soon page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-app">
+        <div class="row">
+          <div class="full">
+            <h1>PING<span>.</span></h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="full">
+            <h4>We are lauching <span>soon!</span></h4>
+            <p style="margin-top : 20px">Subscribe and get notified</p>
+            <div class="email">
+              <div class="input-field">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Your email address..."
+                />
+                <p class="errorMessage">please provide a valid email address</p>
+              </div>
+              <button onclick="emailError()">Notify me</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="full image-container">
+          <img src="./images/illustration-dashboard.png" alt="" srcset="" />
+        </div>
+      </div>
+      <footer>
+        <p class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by
+          <a href="https://www.github.com/ayemitibo" target="_blank">Heybee</a>.
+        </p>
+      </footer>
+    </div>
+  </body>
+  <script>
+    let email = document.getElementById("email");
+    let errorMessage = document.getElementsByClassName("errorMessage")[0];
+    function emailError() {
+      if (
+        email.value == "" ||
+        email.value.length == 0 ||
+        !email.value.match(
+          /([a-zA-Z0-9]){3,}(@)([a-zA-Z0-9])*(\.)([a-zA-Z0-9])*/g
+        )
+      ) {
+        console.log(errorMessage);
+        email.style.borderColor = "hsl(354, 100%, 66%)";
+        errorMessage.style.display = "block";
+      } else {
+        email.style.borderColor = " hsl(223, 100%, 88%)";
+        errorMessage.style.display = "none";
+      }
+    }
+  </script>
+</html>
